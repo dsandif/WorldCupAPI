@@ -1,0 +1,23 @@
+{
+  "bindings": [
+    {
+      "name": "scoreItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "matchscorequeue",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "out",
+      "type": "table",
+      "direction": "out",
+      "tableName": "teamscores",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}
